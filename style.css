@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Merriweather:wght@300;400;700&display=swap');
+:root {
+  --cor-cinza: #F7FAFC;
+  --cor-cinza2:#E8E8E8;
+  --cor-branco: #ffffff;
+  --cor-preto: #1A202C;
+  --cor-preto-claro: #3D4045;
+  --cor-verde: #04C45C;
+  --cor-verde-escuro: #039143;
+  --cor-azul: #2B6CB0;
+}
+/*RESET CSS*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+/*UTILITIES*/
+body {
+  font-family: 'Lato', sans-serif;
+  width: 100%;
+  height: 100vh;
+}
+label, input, button {
+  display: block;
+}
+input[type='radio'] {
+  display: inline;
+}
+a {
+  text-decoration: none;
+}
+/*MAIN*/
+main {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100vh;
+}
+.leftContent {
+  width: 50%;
+  height: 100vh;
+  /**/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /**/
+  background-color: var(--cor-cinza);
+}
+.rightContent {
+  width: 50%;
+  height: 100vh;
+  /**/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+.container {
+  width: 60%;
+  margin-bottom: 50px;
+}
+.container > p {
+  font: normal normal 400 16px/20px 'Merriweather';
+  margin-bottom: 8px;
+  color: var(--cor-preto);
+}
+.container > h1 {
+  font: normal normal 700 26px/33px 'Merriweather';
+  margin-bottom: 16px;
+  color: var(--cor-preto);
+}
+form label {
+  font: normal normal 400 16px/19px 'Lato';
+  margin-bottom: 8px;
+}
+form > input {
+  width: 100%;
+  padding: 16px 16px;
+  border: 1px solid var(--cor-cinza2);
+  border-radius: 5px;
+}
+#inputEmail {
+  margin-bottom: 16px;
+}
+#inputSenha {
+  margin-bottom: 16px;
+}
+.formText {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+.formTextContainer {
+  display: flex;
+}
+.formTextContainer > input {
+  margin-right: 8px;
+}
+.formText > a {
+  color: var(--cor-azul);
+}
+form > button {
+  width: 100%;
+  padding: 16px 16px;
+  margin-bottom: 16px;
+  border-radius: 5px;
+  border: none;
+  /*font*/
+  font: normal normal 700 16px/19px 'Lato';
+  color: var(--cor-branco);
+  /**/
+  cursor: pointer;
+}
+#entrar {
+  transition: 0.2s;
+  background-color: var(--cor-verde);
+}
+#contaGoogle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--cor-preto);
+  transition: 0.2s;
+}
+.usuarioSemConta {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 210px;
+}
+.usuarioSemConta > p {
+  color: var(--cor-preto);
+}
+.usuarioSemConta > a {
+  color: var(--cor-azul);
+}
+/*MEDIA-QUERY*/
+@media screen and (max-width: 1024px) {
+ .leftContent {
+  display: none;
+ }
+ .rightContent {
+  width: 100%;
+ }
+}
+@media screen and (max-width: 414px) {
+  .container {
+    width: 80%;
+  }
+ }
+ /*EFFECTS*/
+ #entrar:hover {
+  background-color: var(--cor-verde-escuro);
+ }
+ #contaGoogle:hover {
+  background-color: var(--cor-preto-claro);
+ }
